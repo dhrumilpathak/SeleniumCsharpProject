@@ -1,0 +1,51 @@
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{2881DB8E-DCFE-4033-9E81-78D7D4A7B935}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/Dhrumil/Work/Selenium.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework/Pages/LeavePage.cs" relfile="Selenium.Csharp.Framework/Pages/LeavePage.cs" line="21" column="1" />
+      <Breakpoint file="/Users/Dhrumil/Work/Selenium.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework/Tests/HomePage_Test.cs" relfile="Selenium.Csharp.Framework/Tests/HomePage_Test.cs" line="39" column="1" />
+      <Breakpoint file="/Users/Dhrumil/Work/Selenium.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework/Utilies/Driver.cs" relfile="Selenium.Csharp.Framework/Utilies/Driver.cs" line="34" column="1" />
+      <Breakpoint file="/Users/Dhrumil/Work/Selenium.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework/Tests/HomePage_Test.cs" relfile="Selenium.Csharp.Framework/Tests/HomePage_Test.cs" line="19" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Selenium.Csharp.Framework/Tests/DemoTest.cs">
+    <Files>
+      <File FileName="Selenium.Csharp.Framework/Tests/HomePage_Test.cs" Line="47" Column="1" />
+      <File FileName="Selenium.Csharp.Framework/Utilies/CommonMethods.cs" Line="1" Column="1" />
+      <File FileName="Selenium.Csharp.Framework/Utilies/DriverManager.cs" Line="1" Column="1" />
+      <File FileName="Selenium.Csharp.Framework/Utilies/PageActions.cs" Line="13" Column="1" />
+      <File FileName="Selenium.Csharp.Framework/app.config" Line="1" Column="1" />
+      <File FileName="Selenium.Csharp.Framework/BaseTest.cs" Line="20" Column="1" />
+      <File FileName="Selenium.Csharp.Framework/Pages/HomePage.cs" Line="17" Column="30" />
+      <File FileName="Selenium.Csharp.Framework/TestData/Login.json" Line="16" Column="1" />
+      <File FileName="Selenium.Csharp.Framework/TestData/simple.json" Line="1" Column="1" />
+      <File FileName="Selenium.Csharp.Framework/Tests/DemoTest.cs" Line="12" Column="18" />
+      <File FileName="Selenium.Csharp.Framework/Pages/LoginPage.cs" Line="28" Column="26" />
+      <File FileName="Selenium.Csharp.Framework/DataHandler/ReadJsonData.cs" Line="13" Column="7" />
+      <File FileName="Selenium.Csharp.Framework/Utilies/Driver.cs" Line="28" Column="10" />
+      <File FileName="Selenium.Csharp.Framework/Pages/LeavePage.cs" Line="23" Column="10" />
+      <File FileName="Selenium.Csharp.Framework/DataHandler/ROOT.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Selenium.Csharp.Framework" expanded="True" />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Selenium.Csharp.Framework" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <DisabledProjects>
+    <String>../../rvs-autobots-seleniumc/AutoBots_Framework/AutoBots_Selenium_CSharp_Framework.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Selenium.Csharp.Framework PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/Dhrumil/Work/Selenium.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework.csproj": {}
+  },
+  "projects": {
+    "/Users/Dhrumil/Work/Selenium.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/Dhrumil/Work/Selenium.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework.csproj",
+        "projectName": "Selenium.Csharp.Framework",
+        "projectPath": "/Users/Dhrumil/Work/Selenium.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework.csproj",
+        "packagesPath": "/Users/dharini/.nuget/packages/",
+        "outputPath": "/Users/Dhrumil/Work/Selenium.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dharini/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "DotNetSeleniumExtras.PageObjects": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "DotNetSeleniumExtras.PageObjects.Core": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "DotNetSeleniumExtras.PageObjects.Core.Linq": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "DotNetSeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.2.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit.ConsoleRunner": {
+              "target": "Package",
+              "version": "[3.15.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Selenium.Support": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[102.0.5005.6102, )"
+            },
+            "SeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "WebDriverManager": {
+              "target": "Package",
+              "version": "[2.13.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium.Csharp.Framework", "Selenium.Csharp.Framework\Selenium.Csharp.Framework.csproj", "{2881DB8E-DCFE-4033-9E81-78D7D4A7B935}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoBots_Selenium_CSharp_Framework", "..\..\rvs-autobots-seleniumc\AutoBots_Framework\AutoBots_Selenium_CSharp_Framework.csproj", "{24E27D71-19FA-4888-B975-55ED02D63B33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2881DB8E-DCFE-4033-9E81-78D7D4A7B935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2881DB8E-DCFE-4033-9E81-78D7D4A7B935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2881DB8E-DCFE-4033-9E81-78D7D4A7B935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2881DB8E-DCFE-4033-9E81-78D7D4A7B935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24E27D71-19FA-4888-B975-55ED02D63B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24E27D71-19FA-4888-B975-55ED02D63B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24E27D71-19FA-4888-B975-55ED02D63B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24E27D71-19FA-4888-B975-55ED02D63B33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00EE07C1-3662-4C53-BFB6-9C79803D665B}
+	EndGlobalSection
+EndGlobal

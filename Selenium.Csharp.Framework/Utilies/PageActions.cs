@@ -11,7 +11,7 @@ namespace Selenium.Csharp.Framework.Utilies
         protected void Click(By by)
         {
 
-            Driver.getDriver().FindElement(by).Click();
+            Driver.driver.FindElement(by).Click();
 
         }
 

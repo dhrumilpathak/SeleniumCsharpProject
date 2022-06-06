@@ -7,7 +7,7 @@ namespace Selenium.Csharp.Framework.Pages
 {
     public class LoginPage : PageActions
     {
-       private IWebDriver driver;
+     
 
 
         /*        [FindsBy(How = How.Id, Using = "txtUsername")]
@@ -27,7 +27,7 @@ namespace Selenium.Csharp.Framework.Pages
 
         public LoginPage EnterUserName(string username)
         {
-            Driver.getDriver().FindElement(Login_username).SendKeys(username);
+            Driver.driver.FindElement(Login_username).SendKeys(username);
             //  Login_username.SendKeys(username);
             return this;
             
@@ -35,7 +35,7 @@ namespace Selenium.Csharp.Framework.Pages
 
         public LoginPage EnterPassword(string password )
         {
-            Driver.getDriver().FindElement(Login_Password).SendKeys(password);
+            Driver.driver.FindElement(Login_Password).SendKeys(password);
             return this;
             
         

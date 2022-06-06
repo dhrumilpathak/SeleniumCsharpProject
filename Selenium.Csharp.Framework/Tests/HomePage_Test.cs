@@ -6,12 +6,13 @@ using Selenium.Csharp.Framework.Pages;
 
 [assembly:Parallelizable(ParallelScope.Fixtures)]
 [assembly:LevelOfParallelism(3)]
+
 namespace Selenium.Csharp.Framework.Tests
 {
     [TestFixture]
       public sealed class HomePage_Test : BaseTest
     {
-       private IWebDriver driver;
+    
 
         [TestCaseSource(typeof(ReadJsonData), nameof(ReadJsonData.ReadJsonLoginArray))]
    

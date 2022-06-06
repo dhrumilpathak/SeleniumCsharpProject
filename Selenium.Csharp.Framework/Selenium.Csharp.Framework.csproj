@@ -22,6 +22,8 @@
     <PackageReference Include="NUnit" Version="3.13.3" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
     <PackageReference Include="NUnit.ConsoleRunner" Version="3.15.0" />
+    <PackageReference Include="ExtentReports" Version="4.1.0" />
+    <PackageReference Include="ExtentReports.Core" Version="1.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,6 +46,8 @@
     <None Remove="NUnit" />
     <None Remove="NUnit3TestAdapter" />
     <None Remove="NUnit.ConsoleRunner" />
+    <None Remove="ExtentReports" />
+    <None Remove="ExtentReports.Core" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tests\" />

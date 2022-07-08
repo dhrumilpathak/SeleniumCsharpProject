@@ -29,12 +29,9 @@ namespace Selenium.Csharp.Framework.Tests
         {
                 LoginPage _loginPage = new LoginPage(getDriver());
                 HomePage _homePage = new HomePage(getDriver());
-                _loginPage.EnterUserName(username);
-                _loginPage.EnterPassword(password);
-                _loginPage.ClickLoginButton();
-                 Thread.Sleep(5000);
-                _homePage.ClickWelcome();
-                _homePage.ClickLogout();
+            _loginPage.EnterUserName(username).EnterPassword(password)
+                .ClickLoginButton().ClickWelcome()
+               .ClickLogout();
 
             }
         //[Parallelizable(ParallelScope.All)]
@@ -48,7 +45,6 @@ namespace Selenium.Csharp.Framework.Tests
             _loginPage.ClickLoginButton();
             _homePage.ClickWelcome();
             _homePage.ClickLogout();
-
         }
 
     }

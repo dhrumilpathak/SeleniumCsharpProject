@@ -37,7 +37,7 @@ namespace Selenium.Csharp.Framework.Pages
             driver.FindElement(Login_Password).SendKeys(password);
             return this;
         }
-        public void ClickLoginButton()
+        public HomePage ClickLoginButton()
         {
 
            
@@ -45,7 +45,7 @@ namespace Selenium.Csharp.Framework.Pages
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromMinutes(2));
             wait.Until(ExpectedConditions.ElementIsVisible(By.Id("menu_dashboard_index")));
             
-            // return new HomePage(getDriver());
+            return new HomePage(getDriver());
 
 
         }

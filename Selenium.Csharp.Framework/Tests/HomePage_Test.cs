@@ -5,8 +5,8 @@ using Selenium.Csharp.Framework.DataHandler;
 using Selenium.Csharp.Framework.Pages;
 using System.Threading;
 
-[assembly:Parallelizable(ParallelScope.Fixtures)]
-[assembly:LevelOfParallelism(3)]
+//[assembly:Parallelizable(ParallelScope.Fixtures)]
+//[assembly:LevelOfParallelism(3)]
 
 namespace Selenium.Csharp.Framework.Tests
 {
@@ -23,7 +23,7 @@ namespace Selenium.Csharp.Framework.Tests
 
 
         }
-        [Parallelizable(ParallelScope.All)]
+     //   [Parallelizable(ParallelScope.All)]
         [TestCase("Admin","admin123")]
         public void LoginHRM_Test1(string username, string password)
         {
@@ -37,7 +37,7 @@ namespace Selenium.Csharp.Framework.Tests
                 _homePage.ClickLogout();
 
             }
-        [Parallelizable(ParallelScope.All)]
+        //[Parallelizable(ParallelScope.All)]
         [TestCase("Admin", "admin123")]
         public void LoginHRM_Test(string username, string password)
         {
@@ -50,9 +50,6 @@ namespace Selenium.Csharp.Framework.Tests
             _homePage.ClickLogout();
 
         }
-
-
-
 
     }
 }

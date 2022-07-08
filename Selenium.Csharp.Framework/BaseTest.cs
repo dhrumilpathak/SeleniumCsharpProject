@@ -26,15 +26,16 @@ namespace Selenium.Csharp.Framework
         [OneTimeSetUp]
         protected void BeforeClassReport()
         {
+            var TestName = TestContext.CurrentContext.Test.Name;
             var Datetamp = DateTime.Now.ToString("dd-MM-yyyy_hh-mm-ss");
             var str = DateTime.Now.TimeOfDay.ToString();
             var path = System.Reflection.Assembly.GetCallingAssembly().CodeBase;
             var actualPath = path.Substring(0, path.LastIndexOf("bin"));
             var projectPath = new Uri(actualPath).LocalPath;
             Directory.CreateDirectory(projectPath.ToString() + "Reports");
-            var fileName = string.Format("{0}Reports\\ExtentReport{1}.html", projectPath, Datetamp);
-            //var fileName = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..")) + "\\TestReport\\" +DateTime.Now.ToString("dd MMMM yyyy hhmmss") + ".html";
-            var htmlReporter = new ExtentHtmlReporter(fileName);
+          //  var fileName = string.Format("{0}Reports\\"+TestName+ Datetamp+".html", projectPath, Datetamp);
+       var fileName = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..")) + "\\TestReport\\"+TestName +"_"+ Datetamp + ".html";
+            var htmlReporter = new ExtentV3HtmlReporter(fileName);
             _extent = new ExtentReports();
             _extent.AttachReporter(htmlReporter);
             _extent.AddSystemInfo("Host Name", "LocalHost");

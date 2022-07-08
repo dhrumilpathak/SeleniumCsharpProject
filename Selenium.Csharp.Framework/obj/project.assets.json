@@ -10189,29 +10189,30 @@
     ]
   },
   "packageFolders": {
-    "/Users/dharini/.nuget/packages/": {}
+    "C:\\Users\\Dhrumil\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Dhrumil/Work/Selenium.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework.csproj",
+      "projectUniqueName": "C:\\Users\\Dhrumil\\Source\\Repos\\SeleniumCsharpProject\\Selenium.Csharp.Framework\\Selenium.Csharp.Framework.csproj",
       "projectName": "Selenium.Csharp.Framework",
-      "projectPath": "/Users/Dhrumil/Work/Selenium.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework.csproj",
-      "packagesPath": "/Users/dharini/.nuget/packages/",
-      "outputPath": "/Users/Dhrumil/Work/Selenium.Framework/Selenium.Csharp.Framework/Selenium.Csharp.Framework/obj/",
+      "projectPath": "C:\\Users\\Dhrumil\\Source\\Repos\\SeleniumCsharpProject\\Selenium.Csharp.Framework\\Selenium.Csharp.Framework.csproj",
+      "packagesPath": "C:\\Users\\Dhrumil\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dhrumil\\Source\\Repos\\SeleniumCsharpProject\\Selenium.Csharp.Framework\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/dharini/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Dhrumil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -10223,7 +10224,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "DotNetSeleniumExtras.PageObjects": {
             "target": "Package",
@@ -10304,22 +10304,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

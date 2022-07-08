@@ -3,15 +3,17 @@ using OpenQA.Selenium;
 
 namespace Selenium.Csharp.Framework.Utilies
 {
-    public class PageActions 
+    public class PageActions :BaseTest
     {
-        IWebDriver driver;
 
 
+        public IWebDriver driver;
+
+        
         protected void Click(By by)
         {
 
-            Driver.driver.FindElement(by).Click();
+            driver.FindElement(by).Click();
 
         }
 

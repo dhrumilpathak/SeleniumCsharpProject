@@ -1,25 +1,25 @@
 ﻿using System;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using Selenium.Csharp.Framework.Utilies;
 using SeleniumExtras.PageObjects;
+using SeleniumExtras.WaitHelpers;
 
 namespace Selenium.Csharp.Framework.Pages
 {
-    public class LoginPage : PageActions
+    public class LoginPage : BaseTest
     {
+
+        private IWebDriver driver;
+
+        public LoginPage(IWebDriver driver)
+        {
+
+            this.driver = driver;
+          //  PageFactory.InitElements(driver, this);
+
+        }
      
-
-
-        /*        [FindsBy(How = How.Id, Using = "txtUsername")]
-             private IWebElement Login_username;
-
-               [FindsBy(How = How.Id, Using = "txtPassword")]
-               private IWebElement Login_Password;
-
-                //[FindsBy(How = How.Id, Using = "btnLogin")]
-                // private IWebElement Login_Button;
-
-                */
 
         private By Login_username = By.Id("txtUsername");
         private By Login_Button = By.Id("btnLogin");
@@ -27,27 +27,26 @@ namespace Selenium.Csharp.Framework.Pages
 
         public LoginPage EnterUserName(string username)
         {
-            Driver.driver.FindElement(Login_username).SendKeys(username);
+            driver.FindElement(Login_username).SendKeys(username);
             //  Login_username.SendKeys(username);
             return this;
-            
         }
 
         public LoginPage EnterPassword(string password )
         {
-            Driver.driver.FindElement(Login_Password).SendKeys(password);
+            driver.FindElement(Login_Password).SendKeys(password);
             return this;
-            
-        
         }
-        public HomePage ClickLoginButton()
+        public void ClickLoginButton()
         {
-            Click(Login_Button);
-            CommonMethods.explicitWait();
 
+           
+            driver.FindElement(Login_Button).Click();
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromMinutes(2));
+            wait.Until(ExpectedConditions.ElementIsVisible(By.Id("menu_dashboard_index")));
+            
+            // return new HomePage(getDriver());
 
-            return new HomePage();
-               
 
         }
 

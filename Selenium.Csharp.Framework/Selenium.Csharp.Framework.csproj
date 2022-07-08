@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Utilies\Driver.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
     <PackageReference Include="Selenium.WebDriver" Version="4.2.0" />
     <PackageReference Include="Selenium.Support" Version="4.2.0" />
@@ -50,6 +54,7 @@
     <None Remove="ExtentReports.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="TestReport\" />
     <Folder Include="Tests\" />
     <Folder Include="Pages\" />
     <Folder Include="Utilies\" />

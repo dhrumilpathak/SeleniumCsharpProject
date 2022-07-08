@@ -15,36 +15,10 @@ namespace Selenium.Csharp.Framework.Utilies
 
   
 
-        public static IWebDriver driver { get; set; }
+       // public static IWebDriver driver { get; set; }
+        // public IWebDriver driver;
+        public ThreadLocal<IWebDriver> driver = new ThreadLocal<IWebDriver>();
 
-   
-       
-     
-
-        //private static ThreadLocal<IWebDriver> dr = new ThreadLocal<IWebDriver>();
-
-        //public static IWebDriver getDriver()
-        //{
-        //    return dr.Value;
-        //}
-        //public static void setDriver(IWebDriver driver)
-        //{
-        //    dr.Value = driver;
-        // }
-
-        //[SetUp]
-        //public static void InitDriver()
-        //{
-        //    string url = ConfigurationManager.AppSettings["URL"];
-        //    if (driver is null)
-        //    {
-        //        new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
-        //        driver = new ChromeDriver();
-        //       setDriver(driver);
-        //        getDriver().Navigate().GoToUrl(url);
-        //        getDriver().Manage().Window.Maximize();
-        //    }
-        //}
 
 
         [SetUp]
@@ -58,7 +32,7 @@ namespace Selenium.Csharp.Framework.Utilies
                 //setDriver(driver);
                 driver.Navigate().GoToUrl(url);
                 driver.Manage().Window.Maximize();
-                
+ 
             }
 
             return driver;

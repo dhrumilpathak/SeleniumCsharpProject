@@ -10,6 +10,10 @@ using System.IO;
 using AventStack.ExtentReports.Reporter;
 using AventStack.ExtentReports;
 using NUnit.Framework.Interfaces;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
+using System.Threading;
 
 namespace Selenium.Csharp.Framework
 {
@@ -20,9 +24,13 @@ namespace Selenium.Csharp.Framework
         protected ExtentTest _test;
        
         public ExtentReports extentReport;
-       
+        public ThreadLocal<IWebDriver> driver = new ThreadLocal<IWebDriver>();
 
+        public IWebDriver getDriver()
 
+        {
+            return driver.Value;
+        }
         [OneTimeSetUp]
         protected void BeforeClassReport()
         {
@@ -34,7 +42,7 @@ namespace Selenium.Csharp.Framework
             var projectPath = new Uri(actualPath).LocalPath;
             Directory.CreateDirectory(projectPath.ToString() + "Reports");
           //  var fileName = string.Format("{0}Reports\\"+TestName+ Datetamp+".html", projectPath, Datetamp);
-       var fileName = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..")) + "\\TestReport\\"+TestName +"_"+ Datetamp + ".html";
+            var fileName = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..")) + "\\TestReport\\"+TestName +"_"+ Datetamp + ".html";
             var htmlReporter = new ExtentV3HtmlReporter(fileName);
             _extent = new ExtentReports();
             _extent.AttachReporter(htmlReporter);
@@ -47,8 +55,56 @@ namespace Selenium.Csharp.Framework
         {
 
             _test = _extent.CreateTest(TestContext.CurrentContext.Test.Name).Info("Testing Started");
-            Driver.InitDriver();
-                
+            string url = ConfigurationManager.AppSettings["URL"];
+            string browserName = TestContext.Parameters["browserName"];
+            if (browserName == null)
+            {
+
+                browserName = ConfigurationManager.AppSettings["browser"];
+            }
+            InitBrowser(browserName);
+
+          if (driver is null)
+            {
+                new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
+             
+                //setDriver(driver);
+            }
+            driver.Value.Navigate().GoToUrl(url);
+            driver.Value.Manage().Window.Maximize();
+
+
+        }
+
+        public void InitBrowser(string browserName)
+
+        {
+
+            switch (browserName)
+            {
+
+                case "Firefox":
+
+                    new WebDriverManager.DriverManager().SetUpDriver(new FirefoxConfig());
+                    driver.Value = new FirefoxDriver();
+                    break;
+
+
+
+                case "Chrome":
+
+                    new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
+                    driver.Value = new ChromeDriver();
+                    break;    
+
+
+                case "Edge":
+
+                    driver.Value = new EdgeDriver();
+                    break;
+
+            }
+
 
         }
 
@@ -69,29 +125,26 @@ namespace Selenium.Csharp.Framework
                    
                      _test.Log(Status.Fail, "Fail");
                     _test.Log(Status.Fail, "Snapshot below: ");
-                    _test.Fail("Test failed", captureScreenShot(Driver.driver, fileName));
+                    _test.Fail("Test failed", captureScreenShot(driver.Value, fileName));
                     _test.Log(Status.Fail, "test failed with logtrace" + stacktrace);
                     break;
               
                 default:
                     logstatus = Status.Pass;
                     break;
-
-
-                   
             }
             _test.Log(logstatus, "Test ended with " + logstatus + stacktrace);
 
-            
-            
+            _extent.Flush();
+            driver.Value.Quit();
         }
 
-        [OneTimeTearDown]
-        public void EndReport()
-        {
-            _extent.Flush();
-            Driver.driver.Quit();
-        }
+        //[OneTimeTearDown]
+        //public void EndReport()
+        //{
+            
+        //    driver.Value.Quit();
+        //}
 
         public static string Capture(IWebDriver driver, string screenShotName)
         {

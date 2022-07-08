@@ -8,9 +8,20 @@ using SeleniumExtras.WaitHelpers;
 
 namespace Selenium.Csharp.Framework.Pages
 {
-    public class HomePage
+    public class HomePage:BaseTest
 
     {
+
+        private IWebDriver driver;
+
+        public HomePage(IWebDriver driver)
+        {
+
+            this.driver = driver;
+            PageFactory.InitElements(driver, this);
+
+        }
+
         string btnLeavePage = ".//*[@class='quickLaunge']//*[contains(text(),'Leave List')]";
 
      
@@ -18,20 +29,20 @@ namespace Selenium.Csharp.Framework.Pages
         private By link_logout = By.XPath(".//a[text()='Logout']");
         public void waitforPageDisplay()
         {
-            WebDriverWait wait = new WebDriverWait(Driver.driver, TimeSpan.FromSeconds(10));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//*[@id='content']//*[text()='Dashboard']")));
         }
 
         public HomePage ClickWelcome()
         {
             Thread.Sleep(TimeSpan.FromMilliseconds(2000));
-            Driver.driver.FindElement(link_welcome).Click();
+            driver.FindElement(link_welcome).Click();
             return this;
         }
 
         public HomePage ClickLogout()
         {
-            Driver.driver.FindElement(link_logout).Click();
+            driver.FindElement(link_logout).Click();
             return this;
         }
     }

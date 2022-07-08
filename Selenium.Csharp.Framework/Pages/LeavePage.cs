@@ -7,9 +7,10 @@ using SeleniumExtras.PageObjects;
 namespace Selenium.Csharp.Framework.Pages
 {
     public class LeavePage : PageActions
-
     {
+
         public IWebDriver driver;
+    
         private LeavePage(IWebDriver driver)
         {
             this.driver = driver;

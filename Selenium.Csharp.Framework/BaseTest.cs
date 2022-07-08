@@ -60,16 +60,17 @@ namespace Selenium.Csharp.Framework
             ? ""
             : string.Format("{0}", TestContext.CurrentContext.Result.StackTrace);
             Status logstatus;
+            DateTime time = DateTime.Now;
+            string fileName = "Screenshot_" + time.ToString("h_mm_ss") + ".png";
             switch (status)
             {
                 case TestStatus.Failed:
                     logstatus = Status.Fail;
-                    //DateTime time = DateTime.Now;
-                   // string fileName = "Screenshot_" + time.ToString("h_mm_ss") + ".png";
-                  //  string screenShotPath = Capture(driver, fileName);
+                   
                      _test.Log(Status.Fail, "Fail");
                     _test.Log(Status.Fail, "Snapshot below: ");
-                        //+ _test.AddScreenCaptureFromPath("Screenshots\\" + fileName));
+                    _test.Fail("Test failed", captureScreenShot(Driver.driver, fileName));
+                    _test.Log(Status.Fail, "test failed with logtrace" + stacktrace);
                     break;
               
                 default:
@@ -104,6 +105,15 @@ namespace Selenium.Csharp.Framework
             var localpath = new Uri(finalpth).LocalPath;
             screenshot.SaveAsFile(localpath, ScreenshotImageFormat.Png);
             return reportPath;
+        }
+
+        public MediaEntityModelProvider captureScreenShot(IWebDriver driver, String screenShotName)
+
+        {
+            ITakesScreenshot ts = (ITakesScreenshot)driver;
+            var screenshot = ts.GetScreenshot().AsBase64EncodedString;
+
+            return MediaEntityBuilder.CreateScreenCaptureFromBase64String(screenshot, screenShotName).Build();
         }
 
     }
